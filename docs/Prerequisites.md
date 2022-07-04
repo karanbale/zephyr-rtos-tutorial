@@ -16,3 +16,6 @@ This allows you to connect you Nucleo board through the debugger to your compute
 
 ## 3. [Ethernet Cable](https://www.google.com/search?q=ethernet)
 If you want to learn about networking you'll need an ethernet cable and an ethernet port on your computer (or have access to the router).
+
+## 4. [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)
+This is the board, that I am using for windows based tutorial and testing.

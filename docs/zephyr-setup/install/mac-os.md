@@ -53,7 +53,7 @@ pip3 install -r ~/zephyrproject/zephyr/scripts/requirements.txt
 ```
 
 ## 4) Install GNU ARM Embedded toolchain
-- Dowload [GNU ARM Embedded build](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) and extract in `~/dev-tools`
+- Download [GNU ARM Embedded build](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) and extract in `~/dev-tools`
 - Set environment variables in `~/.zshenv`
 ```
 mate .zshenv
