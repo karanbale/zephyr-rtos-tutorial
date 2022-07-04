@@ -19,11 +19,11 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 - [ ] **Lesson 1: Zephyr Setup** 
   - [ ] 1.1 Installation
     - [x] [MacOS](docs/zephyr-setup/install/mac-os.md)
-    - [ ] [Windows](docs/zephyr-setup/install/windows.md)
+    - [x] [Windows](docs/zephyr-setup/install/windows.md)
     - [ ] [Linux](docs/zephyr-setup/install/linux.md)
   - [ ] 1.2 Basic Workspace Setup
     - [x] [MacOS](docs/zephyr-setup/setup/mac-os.md)
-    - [ ] [Windows](docs/zephyr-setup/setup/windows.md)
+    - [x] [Windows](docs/zephyr-setup/setup/windows.md)
     - [ ] [Linux](docs/zephyr-setup/setup/linux.md)
 
 - [x] **Lesson 2: Introduction**
