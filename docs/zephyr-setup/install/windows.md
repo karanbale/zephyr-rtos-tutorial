@@ -10,33 +10,33 @@ grand_parent: 'Lesson 1: Zephyr Setup'
 ## 1) Install dependencies
 
 - Install Chololatey
-    Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
+    Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`.
 
     Now, run the following command:
     ```
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     ```
 
-    If you don't see any errors, you are ready to use Chocolatey! Type choco or choco -?
+    If you don't see any errors, you are ready to use `Chocolatey`! Type `choco` or `choco -?` to verify you can use it.
 
-    Open a command prompt (cmd.exe) as an Administrator (press the Windows key, type “cmd.exe” in the prompt, then right-click the result and choose “Run as Administrator”).
+- Open a command prompt (cmd.exe) as an Administrator (press the Windows key, type “cmd.exe” in the prompt, then right-click the result and choose “Run as Administrator”).
 
-    Optionally disable global confirmation to avoid having to confirm installation of individual programs:
-    ```
-    choco feature enable -n allowGlobalConfirmation
-    ```
+- Optionally disable global confirmation to avoid having to confirm installation of individual programs:
+```
+choco feature enable -n allowGlobalConfirmation
+```
 
-    Install CMake:
-    ```
-    choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
-    ```
+- Install CMake:
+```
+choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
+```
 
-    Install the rest of the tools:
-    ```
-    choco install git python ninja dtc-msys2 gperf
-    ```
+- Install the rest of the tools:
+```
+choco install git python ninja dtc-msys2 gperf
+```
 
-    Close the Administrator command prompt window.
+- Close the Administrator command prompt window.
 
 ## 2) Bootstrap west
 
@@ -80,8 +80,8 @@ pip3 install -r zephyr/scripts/requirements.txt
     - For my raspberry pi pico board, I downloaded `AArch32 bare-metal target (arm-none-eabi)`
 
 - Configure the environment variables needed to inform Zephyr build system to use this toolchain:
-    - Set ZEPHYR_TOOLCHAIN_VARIANT to gnuarmemb.
-    - Set GNUARMEMB_TOOLCHAIN_PATH to the toolchain installation directory
+    - Set `ZEPHYR_TOOLCHAIN_VARIANT` to `gnuarmemb`.
+    - Set `GNUARMEMB_TOOLCHAIN_PATH` to the toolchain installation directory
     - E.g.:
         ```
         set ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
