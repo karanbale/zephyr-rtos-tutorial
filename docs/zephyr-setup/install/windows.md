@@ -7,7 +7,7 @@ grand_parent: 'Lesson 1: Zephyr Setup'
 
 # Install
 
-NOTE: Please follow either following instructions or refer to these [official instructions](https://docs.zephyrproject.org/latest/develop/getting_started/index.html).
+NOTE: Please follow either following instructions or refer to [official instructions](https://docs.zephyrproject.org/latest/develop/getting_started/index.html).
 
 ## 1) Install dependencies
 
@@ -102,7 +102,7 @@ pip3 install -r zephyr/scripts/requirements.txt
 ## 6) Build `Hello World!` sample
 - Go to your <zephyr repo>
 ```
-cd %HOME%\zephyrproject\zephyr
+cd %homepath%\zephyrproject\zephyr
 ```
 
 - Run following command to build with verbose (`-v`) and cleaning any previous build files (`--prestine`)
@@ -114,11 +114,13 @@ OR
 ```
 west build -b rpi_pico samples\hello_world --pristine
 ```
+A succesful build looks like this:
+![succes-build_win_blinky](/images/zephyr-setup/succes-build_win_blinky.png)
 
 ## 7) Build `Blinky` sample
 - Go to your <zephyr repo>
 ```
-cd %HOME%\zephyrproject\zephyr
+cd %homepath%\zephyrproject\zephyr
 ```
 
 - Run following command to build with verbose (`-v`) and cleaning any previous build files (`--prestine`)
@@ -130,6 +132,11 @@ OR
 ```
 west build -b rpi_pico samples\basic\blinky --pristine
 ```
+A succesful build looks like this:
+![succes-build_win_hello_world](/images/zephyr-setup/succes-build_win_hello_world.png)
 
 ## 7) Flash the Sample
-<TBD>
+```
+cd %homepath%\zephyrproject\zephyr\samples\basic\blinky
+west flash
+```
