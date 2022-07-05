@@ -7,6 +7,8 @@ grand_parent: 'Lesson 1: Zephyr Setup'
 
 # Install
 
+NOTE: Please follow either following instructions or refer to these [official instructions](https://docs.zephyrproject.org/latest/develop/getting_started/index.html).
+
 ## 1) Install dependencies
 
 - Install Chololatey
@@ -35,6 +37,15 @@ choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
 ```
 choco install git python ninja dtc-msys2 gperf
 ```
+
+- Install `vs_BuildTools`
+```
+Download & install https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022 (this is current version as of 07/04/2022, use whatever is latest)
+```
+
+Select following options during installation:
+
+![vs_BuildTool_setup_options](/images/zephyr-setup/vs_BuildTool_setup_options.png)
 
 - Close the Administrator command prompt window.
 
@@ -88,6 +99,37 @@ pip3 install -r zephyr/scripts/requirements.txt
         set GNUARMEMB_TOOLCHAIN_PATH=C:\gnu_arm_embedded
         ```
 
-## 6) Build Hello World! sample
+## 6) Build `Hello World!` sample
+- Go to your <zephyr repo>
+```
+cd %HOME%\zephyrproject\zephyr
+```
+
+- Run following command to build with verbose (`-v`) and cleaning any previous build files (`--prestine`)
+```
+west -v build -b rpi_pico samples\hello_world --pristine
+```
+OR
+- Run following command to build WITHOUT verbose and cleaning any previous build files (`--prestine`)
+```
+west build -b rpi_pico samples\hello_world --pristine
+```
+
+## 7) Build `Blinky` sample
+- Go to your <zephyr repo>
+```
+cd %HOME%\zephyrproject\zephyr
+```
+
+- Run following command to build with verbose (`-v`) and cleaning any previous build files (`--prestine`)
+```
+west -v build -b rpi_pico samples\basic\blinky --pristine
+```
+OR
+- Run following command to build WITHOUT verbose and cleaning any previous build files (`--prestine`)
+```
+west build -b rpi_pico samples\basic\blinky --pristine
+```
 
 ## 7) Flash the Sample
+<TBD>
